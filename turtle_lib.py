@@ -4,23 +4,22 @@ import math
 
 
 win = turtle.Screen()  
-win.bgcolor("purple")
-win.title("My Turtle Drawing")
-win.setworldcoordinates(-180, -2, 360, 2)
+win.bgcolor("lightblue")
+win.title("Signal Reader")
+win.setworldcoordinates(-180, -1.5, 720, 1.5)
 
 
 cursor = turtle.Turtle()
 cursor.color("blue")
-cursor.forward
+cursor.penup
+cursor.speed(10)
 
-for i in range(360) :
+for i in range(2880) :
     rad = math.radians(i)
     y = math.sin(rad)
     #cursor.forward(i)
     cursor.goto(rad, y)
     
-
-
 
 cursor.pendown
 '''for _ in range(4):
@@ -29,5 +28,5 @@ cursor.pendown
 '''
 
 #time.sleep(2)
-#win.mainloop()
-win.exitonclick()
+win.mainloop()
+#win.exitonclick()
