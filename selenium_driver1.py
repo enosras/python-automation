@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-driver = webdriver.Safari()
+driver = webdriver.Safari('./safaridriver')
 
 driver.get("http://Users/enos/phptest/phpmysql.html")
 
