@@ -2,12 +2,13 @@ import turtle
 from random import random
 
 t = turtle.Screen()
-t.bgcolor("yellow")
-t.title("IMAGE GENERATOR")
+t.bgcolor("orange")
+t.title("image-GENERATOR")
 
 
 cursor = turtle.Turtle()
 cursor.speed(10)
+#cursor.color("blue")
 #angle = int(input("enter the angle you want"))
 #angle = turtle.textinput("Enter Angle", "Angle Please : ")
 
