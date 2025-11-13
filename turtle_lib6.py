@@ -32,8 +32,15 @@ if __name__ == "__main__":
     cursor.forward(side)
     cursor.left(180 - sim_angles)
     cursor.forward(uniq_side)
-    cursor.left(90 - sim_angles)
-    cursor.forward(side)
+    cursor.left(200 - sim_angles)
+    cursor.forward(side + 40)
+    cursor.penup
+
+    cursor.left(10)
+    cursor.forward(5)
+    cursor.right(100)
+    cursor.pendown
+    cursor.forward(50)
 
 
 
