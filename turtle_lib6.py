@@ -35,10 +35,11 @@ if __name__ == "__main__":
     cursor.left(200 - sim_angles)
     cursor.forward(side + 40)
     cursor.penup
+    cursor.goto (10, 10)
 
-    cursor.left(10)
-    cursor.forward(5)
-    cursor.right(100)
+    #cursor.left(10)
+    #cursor.forward(5)
+    #cursor.right(100)
     cursor.pendown
     cursor.forward(50)
 
