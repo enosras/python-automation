@@ -1,7 +1,11 @@
 import class_test
 
-point = class_test.Enos("enos", 50, "male")
+name = input("Enter Name : ")
+name = name.capitalize()
+age = input("Enter Age : ")
+gender = input("Enter Gender : ")
 
+point = class_test.Enos(name, age, gender)
 #name = point.__init__
 
 print(point.skills())
@@ -9,5 +13,6 @@ print(point.skills())
 print(point.name)
 print(point.age)
 print(point.gender)
-#print(name)
-print(point.place(2092))
+
+location = input("Enter Year to Know Where he lived : ")
+print(point.place(location))
