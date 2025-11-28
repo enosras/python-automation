@@ -1,7 +1,5 @@
 import glob
 
-
-
 glob_pytool = glob.glob('*.py')
 glob_txttool = glob.glob('*.txt')
 
