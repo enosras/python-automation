@@ -1,5 +1,11 @@
 import class_test
 
+help(class_test.Enos)
+
+
+docs = class_test.Enos.__doc__()
+print(docs)
+
 name = input("Enter Name : ")
 name = name.capitalize()
 age = input("Enter Age : ")

@@ -3,8 +3,8 @@ import datetime
 
 
 class Enos:
-    def __doc__(self):
-        return f"This is a class that holds personal information about Enos - a software engineer"
+    def __doc__():
+        return 'This is a class that holds personal information about Enos - a software engineer'
     def __init__(self, jina, miaka, jinsia):
         self.name = jina
         self.age = miaka
