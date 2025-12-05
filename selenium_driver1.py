@@ -14,6 +14,8 @@ print(x)
 #print(driver.get.__doc__)
 #driver.get("http://Users/enos/phptest/phpmysql.html")
 
+driver.quit()
+
 '''
 print("testing")
 time.sleep(10)

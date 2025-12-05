@@ -8,4 +8,3 @@ else
 ls *.py > globs.txt
 echo "create success"
 fi
-
