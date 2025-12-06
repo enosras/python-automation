@@ -10,8 +10,13 @@ import configparser
 # Initialize the Chrome WebDriver
 # Using ChromeDriverManager to automatically handle driver installation
 #service = Service(SafariDriverManager().install())
-driver = webdriver.Safari(service=service)
+driver = webdriver.Chrome().get_network_conditions
+#driver = webdriver.Safari('./safaridriver')
 
+help(driver)
+
+
+'''
 
 try:
     # Navigate to a website
@@ -45,4 +50,7 @@ except Exception as e:
 
 finally:
     # Close the browser
+    time.sleep(10)  # Pause to see the result before closing
     driver.quit()
+
+    '''
