@@ -6,9 +6,9 @@ import requests
 
 #cookies_dict = {}
 #used this link for testing cookies retrieval and other selenium functions
-#chose this url because it is my alma mater site and I am familiar with it
+#chose this url because it is my alma mater site and I am familiar with it, however i was blocked by the fire wall eventually
 
-url = "https://www.google.com/"
+url = "https://www.starbucks.com/"
 
 timer = 2
 #url = "http://localhost:8080"
@@ -44,12 +44,12 @@ with open('cookies.txt', 'a') as f:
 #capturing only specific cookie
 with open('specific_cookie.txt', 'a') as f:
         session_data = driver.session_id
+        
+        f.write(f"{session_data}\n")
         x = 1
         for i, k in cookies_dict.items():
-            f.write(f"{session_data}\n item {x} - {i}: {k}\n")
-            
+            f.write(f"{x} - {i}: {k}\n")
             x += 1
-
 
 
 # Testing page refresh
