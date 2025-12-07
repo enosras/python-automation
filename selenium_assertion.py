@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 url_global = "http://127.0.0.1:8080"
 #url_global = "https://www.google.com"
-text_title = "usiu"
+text_title = "Home Page"
 
 
 
@@ -18,13 +18,20 @@ class MyTest(unittest.TestCase):
         self.assertEqual(self.driver.title, expected_title, "Page title mismatch")
 
     def test_heading_text(self):
-        heading_element = self.driver.find_element(By.TAG_NAME, "h1")
-        self.assertEqual(heading_element.text, "Example Domain", "Heading text mismatch")
+        #self.driver.implicitly_wait(2)
+        heading_element = self.driver.find_element(By.TAG_NAME, "div")
+        #heading_element = self.driver.find_element
+        self.assertEqual(heading_element.text, "SIU HEALTH CENTRE", "Heading text mismatch")
 
     def tearDown(self):
         self.driver.quit()
 
 if __name__ == "__main__":
+    y = By.__doc__
+    print(y)
+    #x= scrape_tool.test_page_title()
+    #print(f'TEST RESULTS : {x}')
+    unittest.main()
     
-    scrape_tool = MyTest(unittest.main())
-    scrape_tool.test_page_title
+
+    
