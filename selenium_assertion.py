@@ -2,9 +2,10 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-url_global = "http://127.0.0.1:8080"
-#url_global = "https://www.google.com"
-text_title = "Home Page"
+#url_global = "http://[::]:8000/enos_dynamic.html"
+#url_global = "http://127.0.0.1:8080"
+url_global = "https://www.google.com"
+text_title = "Delayed remove of an object"
 
 
 
@@ -21,7 +22,7 @@ class MyTest(unittest.TestCase):
         #self.driver.implicitly_wait(2)
         heading_element = self.driver.find_element(By.TAG_NAME, "div")
         #heading_element = self.driver.find_element
-        self.assertEqual(heading_element.text, "SIU HEALTH CENTRE", "Heading text mismatch")
+        self.assertEqual(heading_element.text, "SIU HEALTH CENTR", "Heading text mismatch")
 
     def tearDown(self):
         self.driver.quit()

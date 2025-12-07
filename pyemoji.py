@@ -14,3 +14,5 @@ print("-------------------------------------------")
 print(emoji.emojize("I love :pizza:", language='alias'))
 print(emoji.emojize("I love :pizza:", variant="emoji_type"))
 print(emoji.emojize("I love :pizza:", variant="text_type"))
+
+
