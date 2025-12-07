@@ -2,13 +2,19 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+url_global = "http://127.0.0.1:8080"
+#url_global = "https://www.google.com"
+text_title = "usiu"
+
+
+
 class MyTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Safari()
-        self.driver.get("http://127.0.0.1:8080")
+        self.driver.get(url_global)
 
     def test_page_title(self):
-        expected_title = "usiu"
+        expected_title = text_title
         self.assertEqual(self.driver.title, expected_title, "Page title mismatch")
 
     def test_heading_text(self):
@@ -19,4 +25,6 @@ class MyTest(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    
+    scrape_tool = MyTest(unittest.main())
+    scrape_tool.test_page_title

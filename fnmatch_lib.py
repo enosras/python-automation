@@ -7,7 +7,6 @@ print(ins)
 #help(ins)
 
 
-
 FILE_PATH = os.path.dirname(__file__)   
 print(f"File path: {FILE_PATH}")
 '''
@@ -23,7 +22,7 @@ for file in files:
 traf = fnmatch.translate('*.py')
 print(traf)
 
-help(fnmatch.fnmatch)
+#help(fnmatch.fnmatch)
 
 
 result = fnmatch.fnmatch(FILE_PATH, '*.py')
