@@ -14,7 +14,7 @@ timer = 2
 #url = "http://localhost:8080"
 driver = webdriver.Safari('./safaridriver')
 
-
+print("still alive")
 #driver = webdriver.Firefox()
 
 #x = driver.get(url)

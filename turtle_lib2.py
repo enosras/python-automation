@@ -1,8 +1,12 @@
 import turtle
-
-screen = turtle.Screen()
 from random import random
 
+"""
+trying to see if this docs will appear
+
+"""
+
+screen = turtle.Screen()
 t = turtle.Turtle()
 for i in range(100):
     steps = int(random() * 100)
@@ -11,3 +15,4 @@ for i in range(100):
     t.fd(steps)
 
 screen.exitonclick()
+
