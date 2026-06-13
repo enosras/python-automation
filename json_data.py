@@ -1,5 +1,7 @@
 import json
+from typing import cast
 
+import geocoder
 import geopy.geocoders
 import phonenumbers
 
@@ -11,6 +13,7 @@ from geopy.location import Location
 def capture_region():
     print("success")
     locater = geopy.geocoders.Nominatim(user_agent="dev")
+
     lati = 47.61
     longi = -122.33
     # coord_pair = Point(lati, longi)
@@ -33,12 +36,36 @@ def capture_region():
     return iso_location
 
 
+# for auto region function
+def auto_capture_region():
+    geo_auto = geocoder.ip("me")
+    print(geo_auto)
+    # exact = geo_auto[2]
+    exact_location = geo_auto.country
+    print(exact_location)
+    return exact_location
+
+
 def phone_conv():
     print("Hi there")
     raw_number = input("Enter phone number : ")
     # number = str(raw_number)
     # print("Hi there")
     region = "US"
+    new_number = phonenumbers.parse(raw_number, region)
+    print(new_number)
+    final_number = phonenumbers.format_number(
+        new_number, phonenumbers.PhoneNumberFormat.E164
+    )
+    print(final_number)
+
+
+def phone_conv_auto():
+    print("Hi there")
+    raw_number = input("Enter phone number : ")
+    # number = str(raw_number)
+    # print("Hi there")
+    region = auto_capture_region()
     new_number = phonenumbers.parse(raw_number, region)
     print(new_number)
     final_number = phonenumbers.format_number(
@@ -58,6 +85,10 @@ def json_type():
 
 if __name__ == "__main__":
     # phone_conv()
+    phone_conv()
     # region_data = capture_region()
     # print(region_data)
-    capture_region()
+    # capture_region()
+
+    # auto = auto_capture_region()
+    # print(auto)
