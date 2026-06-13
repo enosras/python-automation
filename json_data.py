@@ -7,7 +7,7 @@ import phonenumbers
 from geopy.location import Location
 
 
-# capture region based on manual cooridnates
+# capture region based on manually captured coordinates
 def capture_region():
     print("success")
     locater = geopy.geocoders.Nominatim(user_agent="dev")
@@ -16,9 +16,21 @@ def capture_region():
     # coord_pair = Point(lati, longi)
     region_locater: Location = locater.reverse((lati, longi), timeout=10)  # type: ignore
     # taking the raw data to detect the country
-    all_geo_data = region_locater.raw["address"]["country"]
+    all_geo_data = region_locater.raw.get("address", {})
+    print(all_geo_data)
+
+    # for finding specific item from the dictionary data structure
+    specific_geo_locator = region_locater.raw["address"]["city"]
+    print(specific_geo_locator)
+
+    # now for the ISO style
+    iso_location = all_geo_data.get("country_code", "KE").upper()
+    print(iso_location)
+
+    # = region_locater.raw("country_code", "US")
     # return region_locater
-    return all_geo_data
+    # return all_geo_data
+    return iso_location
 
 
 def phone_conv():
@@ -46,5 +58,6 @@ def json_type():
 
 if __name__ == "__main__":
     # phone_conv()
-    region_data = capture_region()
-    print(region_data)
+    # region_data = capture_region()
+    # print(region_data)
+    capture_region()
