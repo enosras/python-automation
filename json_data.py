@@ -1,6 +1,24 @@
 import json
 
+import geopy.geocoders
 import phonenumbers
+
+# from geopy import Point
+from geopy.location import Location
+
+
+# capture region based on manual cooridnates
+def capture_region():
+    print("success")
+    locater = geopy.geocoders.Nominatim(user_agent="dev")
+    lati = 47.61
+    longi = -122.33
+    # coord_pair = Point(lati, longi)
+    region_locater: Location = locater.reverse((lati, longi), timeout=10)  # type: ignore
+    # taking the raw data to detect the country
+    all_geo_data = region_locater.raw["address"]["country"]
+    # return region_locater
+    return all_geo_data
 
 
 def phone_conv():
@@ -27,4 +45,6 @@ def json_type():
 
 
 if __name__ == "__main__":
-    phone_conv()
+    # phone_conv()
+    region_data = capture_region()
+    print(region_data)
