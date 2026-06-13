@@ -1,0 +1,4 @@
+what a joy to finally build a custom tool for myself.
+My childhood barrier is finally overcome. I havew the means to configure and set up required tools for almost any software developing task, as well as deployment. What one requires is fluency in the filwesystems, OSI, and, of course, scripting.
+
+Copyright (c) 2025 Enos. All Rights Reserved.

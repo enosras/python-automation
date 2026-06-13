@@ -1,5 +1,6 @@
 import glob
 
+
 glob_pytool = glob.glob('*.py')
 glob_txttool = glob.glob('*.txt')
 
@@ -10,6 +11,7 @@ glob_txttool = glob.glob('*.txt')
     print(len(glob_pytool))
     print(f'Python file found: , {glob_pytool}\n')
 '''
+print
 print("Python files total:" , len(glob_pytool))
 for element in range(len(glob_pytool)):
     #print(len(glob_pytool))

@@ -1,0 +1,5 @@
+
+
+brew install certifi
+export REQUESTS_CA_BUNDLE=/path/to/certifi/cacert.pem
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem
