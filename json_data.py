@@ -4,9 +4,18 @@ from typing import cast
 import geocoder
 import geopy.geocoders
 import phonenumbers
+import rich
 
 # from geopy import Point
 from geopy.location import Location
+
+# import rich_lib
+
+# from rich_lib import print
+# rich = rich_lib.print
+
+# for tich print
+rprint = rich.print
 
 
 # capture region based on manually captured coordinates
@@ -47,7 +56,8 @@ def auto_capture_region():
 
 
 def phone_conv():
-    print("Hi there")
+    # print("Hi there")
+
     raw_number = input("Enter phone number : ")
     # number = str(raw_number)
     # print("Hi there")
@@ -57,11 +67,12 @@ def phone_conv():
     final_number = phonenumbers.format_number(
         new_number, phonenumbers.PhoneNumberFormat.E164
     )
-    print(final_number)
+    rprint(f"[blue] {final_number} [/blue]")
 
 
 def phone_conv_auto():
-    print("Hi there")
+    rich.print("[green] Hi there")
+    # print("Hi there")
     raw_number = input("Enter phone number : ")
     # number = str(raw_number)
     # print("Hi there")
@@ -71,7 +82,10 @@ def phone_conv_auto():
     final_number = phonenumbers.format_number(
         new_number, phonenumbers.PhoneNumberFormat.E164
     )
-    print(final_number)
+    rich.print("[blue] {final_number}")
+
+
+# print(final_number)
 
 
 def json_type():
