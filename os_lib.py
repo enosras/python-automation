@@ -1,8 +1,7 @@
 import os
 import shutil
 
-
-#sh = shutil
+# sh = shutil
 cursor = os.mkdir("new_director")
 print(cursor)
 d = os.rmdir("new_director")
@@ -39,5 +38,3 @@ print(os.pathsep)
 
 k = os.__doc__
 print(k)
-
-

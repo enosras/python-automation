@@ -61,7 +61,9 @@
 
 import asyncio
 
-import websockets  # Import the main package directly
+import websockets
+
+import webhooks_client  # Import the main package directly
 
 
 async def echo(websocket):
@@ -77,6 +79,7 @@ async def main():
     # websockets.serve is the correct function path
     async with websockets.serve(echo, "localhost", 8765):
         print("Server is running on ws://localhost:8765")
+        # webhooks_client.doc().__doc__
         await asyncio.Future()  # Keeps the server running continuously
 
 

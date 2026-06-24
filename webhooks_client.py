@@ -1,4 +1,17 @@
+import os
+
 import requests
+
+
+def __doc__():
+    """this a documentations trial"""
+
+
+def doc():
+    """documentations: a class for showing only docs"""
+    pwd = os.getcwd()
+    print(f"{pwd}")
+
 
 # The local address where your Flask app is listening
 url = "http://127.0.0.1:5000/webhook"
