@@ -15,7 +15,7 @@ def final_execute(one_var, two_var):
             text=True,
             check=True,
         )
-        print("Stdout:", result.stdout)
+        print("[green]Stdout:[/green]", result.stdout)
         # print("Stderr:", result.stderr)
         # Execute a command with shell=True (use with caution for security)
         # This allows the shell to interpret the command strin
