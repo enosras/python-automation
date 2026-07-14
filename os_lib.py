@@ -7,7 +7,6 @@ print(cursor)
 d = os.rmdir("new_director")
 print("Directory created and removed successfully!", d)
 
-
 s = shutil.which("ls")
 print(s)
 
@@ -22,7 +21,6 @@ pwd = os.getcwd()
 print(pwd)
 files = os.listdir("/Users/enos/pylibs")
 print(files)
-
 
 os.cpu_count
 print(os.cpu_count())
