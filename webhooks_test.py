@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route("/webhook", methods=["POST"])
 def handle_webhook():
+    """webhook server function"""
     # Retrieve the incoming JSON data payload
     data = request.json
 
